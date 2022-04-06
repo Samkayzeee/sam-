@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <style>
+        body{
+            background-color: rgb(185, 228, 245);
+        }
+        #piano{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: solid black 2px;
+            width: fit-content;
+            height: 300px;
+        }
+        .whitenote{
+            background-color: white;
+            border-right: 1px solid black;
+            box-sizing: border-box;
+            height: 100%;
+            width: 50px;
+            float: left;
+        }
+        .blacknote{
+            background-color: black;
+            height: 60%;
+            width: 30px;
+            transform: translate(35px, 0px);
+            position: absolute;
+        }
+        .whitenote:hover{
+            /* margin-top: 5px; */
+            background-color: lightblue;
+        }
+        .blacknote:hover{
+            height: 63%;
+        }
+    </style>
+</head>
+<body>
+    <div id="piano">
+        <div class="whitenote" onclick="first()">
+            <div class="blacknote"></div>
+        </div>
+        <div class="whitenote" onclick="second()">
+            <div class="blacknote"></div>
+        </div>
+        <div class="whitenote" onclick="third()"></div>
+        <div class="whitenote" onclick="fourth()">
+            <div class="blacknote"></div>
+        </div>
+
+        <div class="whitenote" onclick="fifth()">
+            <div class="blacknote"></div>
+        </div>
+        <div class="whitenote" onclick="sixth()">
+            <div class="blacknote"></div>
+        </div>
+        <div class="whitenote" onclick="seventh()"></div>
+        <div class="whitenote" onclick="eighth()">
+            <div class="blacknote"></div>
+        </div>
+
+        <div class="whitenote">
+            <div class="blacknote"></div>
+        </div>
+        <div class="whitenote">
+            <div class="blacknote"></div>
+        </div>
+        <div class="whitenote"></div>
+        <div class="whitenote">
+        </div>
+    </div>
+
+        <audio id="do" src="piano/do.wav"></audio>
+        <audio id="re" src="piano/re.wav"></audio>
+        <audio id="mi" src="piano/mi.wav"></audio>
+        <audio id="fa" src="piano/fa.wav"></audio>
+        <audio id="so" src="piano/so.wav"></audio>
+        <audio id="la" src="piano/la.wav"></audio>
+        <audio id="ti" src="piano/ti.wav"></audio>
+        <audio id="doo" src="piano/dooo.wav"></audio>
+</body>
+</html>;
+<script>
+    let d =document.getElementById('do')
+    let re=document.getElementById('re')
+    let mi=document.getElementById('mi')
+    let fa=document.getElementById('fa')
+    let so=document.getElementById('so')
+    let la=document.getElementById('la')
+    let ti=document.getElementById('ti')
+    let doo=document.getElementById('doo')
+
+    function first(){
+        d.play()
+    }
+    function second(){
+        re.play()
+    }
+    function third(){
+        mi.play()
+    }
+    function fourth(){
+        fa.play()
+    }
+    function fifth(){
+        so.play()
+    }
+    function sixth(){
+        la.play()
+    }
+    function seventh(){
+        ti.play()
+    }
+    function eighth(){
+        doo.play()
+    }
+    
+</script>
